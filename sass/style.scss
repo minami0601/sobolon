@@ -1,0 +1,71 @@
+$layout-width-inner: 1200px;
+
+$breakpoints: (
+//キー値
+  "sp": "(max-width: 767px)", //767px以下（スマホ）用の表示
+  "tab":"(min-width: 768px) and (max-width: #{$layout-width-inner})",
+  "pc": "(min-width: #{$layout-width-inner})" //768px以上（タブレット・PC）用の表示
+) !default;
+//メディアクエリ用のmixinを定義。デフォ値はmd
+@mixin mq($breakpoint: sp) {
+//map-get(マップ型変数, キー)で値を取得
+  @media #{map-get($breakpoints, $breakpoint)} {
+    //この中をカスタムできる
+    @content;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  color: #082b48;
+  font-size: 16px;
+  line-height: 1.6;
+  background: #fff;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: #082b48;
+  transition: all 0.3s;
+}
+a:hover {
+  opacity: .7;
+}
+.inner {
+  width: $layout-width-inner;
+  max-width: 100%;
+  margin: auto;
+  @include mq(tab){
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  @include mq(sp){
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
