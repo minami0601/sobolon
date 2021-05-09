@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *::before,
 *::after {
@@ -6,7 +7,8 @@
 }
 
 body {
-  color: #082b48;
+  color: #333333;
+  font-family: 'ヒラギノ明朝 ProN';
   font-size: 16px;
   line-height: 1.6;
   background: #fff;
@@ -34,13 +36,6 @@ a:hover {
   margin: auto;
 }
 
-@media (min-width: 768px) and (max-width: 1200px) {
-  .inner {
-    padding-left: 24px;
-    padding-right: 24px;
-  }
-}
-
 @media (max-width: 767px) {
   .inner {
     padding-left: 16px;
@@ -63,4 +58,83 @@ h5,
 h6 {
   padding: 0;
   margin: 0;
+}
+
+header {
+  height: 70px;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logo {
+  width: 120px;
+  height: 22px;
+}
+
+.logo h1 img {
+  display: block;
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto;
+  line-height: 70px;
+}
+
+.nav-item:not(:first-child) {
+  margin-left: 45px;
+}
+
+.nav-item a {
+  display: inline-block;
+}
+
+.main-visual__inner {
+  position: relative;
+  height: 660px;
+}
+
+.main-visual__message {
+  width: 330px;
+  height: 330px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 2;
+  background-color: #ffffff;
+}
+
+.main-visual__message .message-head {
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 1.69231;
+  margin-top: 92px;
+}
+
+.main-visual__message .message-text {
+  margin-top: 28px;
+  line-height: 1.6875;
+}
+
+.main-visual__img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 990px;
+  max-width: 100%;
+}
+
+.main-visual__img img {
+  display: block;
 }
