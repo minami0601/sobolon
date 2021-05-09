@@ -1,0 +1,66 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  color: #082b48;
+  font-size: 16px;
+  line-height: 1.6;
+  background: #fff;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: #082b48;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+a:hover {
+  opacity: .7;
+}
+
+.inner {
+  width: 1200px;
+  max-width: 100%;
+  margin: auto;
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .inner {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  .inner {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
