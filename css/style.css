@@ -61,7 +61,12 @@ h6 {
 }
 
 header {
+  background-color: #fff;
   height: 70px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 3;
 }
 
 .header {
@@ -96,6 +101,10 @@ header {
 
 .nav-item a {
   display: inline-block;
+}
+
+.main-visual {
+  margin-top: 70px;
 }
 
 .main-visual__inner {
@@ -137,4 +146,62 @@ header {
 
 .main-visual__img img {
   display: block;
+}
+
+.section {
+  margin-top: 160px;
+}
+
+.section__title {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+@media (max-width: 767px) {
+  .section__title {
+    font-size: 30px;
+  }
+}
+
+.section__title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  height: 1px;
+  width: 60px;
+  background-color: #3EA1D1;
+}
+
+.concept__body {
+  margin-top: 64px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.concept__left img {
+  display: block;
+}
+
+.concept__right {
+  margin-left: 80px;
+}
+
+.concept__right .concept__right-head {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.concept__right .concept__right-text {
+  margin-top: 48px;
+  line-height: 1.6875;
 }
