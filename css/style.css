@@ -8,7 +8,7 @@
 
 body {
   color: #333333;
-  font-family: 'ヒラギノ明朝 ProN';
+  font-family: 'ヒラギノ明朝','Noto Serif JP', serif;
   font-size: 16px;
   line-height: 1.6;
   background: #fff;
@@ -203,5 +203,67 @@ header {
 
 .concept__right .concept__right-text {
   margin-top: 48px;
+  line-height: 1.6875;
+}
+
+.feature__body {
+  margin-top: 64px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.feature__item:not(:nth-child(3n + 1)) {
+  margin-left: 90px;
+}
+
+.feature__item {
+  width: calc((100% - (90px * 2) )/ 3);
+  -webkit-box-shadow: 3px 3px 15px #60606029;
+          box-shadow: 3px 3px 15px #60606029;
+}
+
+.feature__item .feature__item__img {
+  height: 240px;
+  width: 100%;
+}
+
+.feature__item .feature__item__img img {
+  display: block;
+}
+
+.feature__item .feature__item__text {
+  padding: 32px 0;
+  font-weight: 600;
+  line-height: 1.6875;
+  text-align: center;
+}
+
+.sub-visual {
+  margin-bottom: 160px;
+  height: 480px;
+  background: url("../img/bg.png") no-repeat center center/cover;
+  position: relative;
+}
+
+.sub-visual__content {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: #fff;
+}
+
+.sub-visual__content .sub-visual__head {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  line-height: 1.68182;
+}
+
+.sub-visual__content .sub-visual__text {
+  font-weight: 600;
   line-height: 1.6875;
 }
